@@ -45,7 +45,7 @@
                                   <label for="pollItems"><g:message code="poll.pollItems.label" default="Poll Items" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: pollInstance, field: 'pollItems', 'errors')}">
-                                    <g:select name="pollItems" from="${org.sw7d.PollItem.list()}" multiple="yes" optionKey="id" size="5" value="${pollInstance?.pollItems*.id}" />
+                                    <g:select name="pollItems" from="${org.sw7d.PollItem.list()}" multiple="yes" optionKey="id" optionValue="description" size="5" value="${pollInstance?.pollItems*.id}" />
                                 </td>
                             </tr>
                         

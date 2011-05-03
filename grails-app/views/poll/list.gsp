@@ -21,21 +21,13 @@
                 <table>
                     <thead>
                         <tr>
-                        
-                            <g:sortableColumn property="id" title="${message(code: 'poll.id.label', default: 'Id')}" />
-                        
                             <g:sortableColumn property="description" title="${message(code: 'poll.description.label', default: 'Description')}" />
-                        
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${pollInstanceList}" status="i" var="pollInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td><g:link action="show" id="${pollInstance.id}">${fieldValue(bean: pollInstance, field: "id")}</g:link></td>
-                        
-                            <td>${fieldValue(bean: pollInstance, field: "description")}</td>
-                        
+                            <td><g:link action="show" id="${pollInstance.id}">${fieldValue(bean: pollInstance, field: "description")}</g:link></td>
                         </tr>
                     </g:each>
                     </tbody>
