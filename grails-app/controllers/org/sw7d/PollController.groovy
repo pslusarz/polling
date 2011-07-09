@@ -117,5 +117,13 @@ class PollController {
 		}
 		
 	}
+	
+	def addItem = {
+		def pollInstance = Poll.get(params.id)
+		def pollItemInstance = new PollItem(description:params.newItemDescription)
+		pollInstance.addToPollItems(pollItemInstance)
+		pollInstance.save(flush:true)
+		render(view: "show", model: [pollInstance: pollInstance])
+	}
 
 }

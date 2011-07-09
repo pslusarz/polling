@@ -67,9 +67,19 @@
 							</td>
 						</tr>
 					</g:each>
-
+                   
 				</tbody>
 			</table>
+			<g:form method="post" >
+			     <g:hiddenField name="id" value="${pollInstance?.id}" />
+                 <g:hiddenField name="version" value="${pollInstance?.version}" />
+			  <table>
+			    <tr>
+			      <td><g:textField name="newItemDescription"/></td>
+			      <td><g:actionSubmit class="new" action="addItem" value="Add Item" /></td>
+			    </tr>
+			  </table>
+			</g:form>
 		</div>
 		<div class="buttons">
 			<g:form>
